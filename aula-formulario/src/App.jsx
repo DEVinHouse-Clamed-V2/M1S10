@@ -9,9 +9,9 @@ function App() {
   })
   
   const [listaMedicamentos, setListaMedicamentos] = useState([])
+  // debugger
 
   const handleSubmit = (evento) => {
-    // debugger
     evento.preventDefault()
 
     const medicamento = {
@@ -40,6 +40,7 @@ function App() {
 
   return (
     <>
+      <form onSubmit={handleSubmit}>
       <form onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="nome">Nome:
           <input 
